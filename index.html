@@ -10,7 +10,7 @@ pxtex=(c,H,S,L,v=10,w=10,h=10,x=c.getContext`2d`,i,j,m=Math.random)=>{for(c.widt
 <p>
 <canvas id=ptc style=width:99px;height:99px;image-rendering:pixelated hidden></canvas>
 <p><b>Source code</b>
-<p><code style=display:block;width:700px;background:#def;padding:10px>pxtex=(c,H,S,L,v=10,w=10,h=10,x=c.getContext`2d`,i,j,m=Math.random)=>{for(c.width=w,c.height=h,i=w;i--;)for(j=h;j--;)x.fillStyle=`hsl(${H+(m()-.5)*v},${S+(m()-.5)*v}%,${L+(m()-.5)*v}%)`,x.fillRect(i,j,1,1);return c.toDataURL()}</code>
+<p><code style=display:block;width:700px;background:#def;padding:10px;word-wrap:break-word>pxtex=(c,H,S,L,v=10,w=10,h=10,x=c.getContext`2d`,i,j,m=Math.random)=>{for(c.width=w,c.height=h,i=w;i--;)for(j=h;j--;)x.fillStyle=`hsl(${H+(m()-.5)*v},${S+(m()-.5)*v}%,${L+(m()-.5)*v}%)`,x.fillRect(i,j,1,1);return c.toDataURL()}</code>
 
 <p><b>Examples</b>
 <p>The images below are zoomed 10x. Reload the page to regenerate them.

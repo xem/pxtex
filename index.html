@@ -1,0 +1,79 @@
+﻿<script>
+pxtex=(c,H,S,L,v=10,w=10,h=10,x=c.getContext`2d`,i,j,m=Math.random)=>{for(c.width=w,c.height=h,i=w;i--;)for(j=h;j--;)x.fillStyle=`hsl(${H+(m()-.5)*v},${S+(m()-.5)*v}%,${L+(m()-.5)*v}%)`,x.fillRect(i,j,1,1);return c.toDataURL()}
+</script>
+
+<h1>pxtex</h1>
+<p><b>Mini randomized pixel-art textures</b>
+<p>1 - Create a hidden HTML canvas
+<br>2 - Call <code>pxtex(canvas, H, S, L, variation=10, width=10, height=10)</code>
+<br>3 - Use the result PNG dataURL anywhere
+<p>
+<canvas id=ptc style=width:99px;height:99px;image-rendering:pixelated hidden></canvas>
+<p><b>Source code</b>
+<p><code style=display:block;width:700px;background:#def;padding:10px>pxtex=(c,H,S,L,v=10,w=10,h=10,x=c.getContext`2d`,i,j,m=Math.random)=>{for(c.width=w,c.height=h,i=w;i--;)for(j=h;j--;)x.fillStyle=`hsl(${H+(m()-.5)*v},${S+(m()-.5)*v}%,${L+(m()-.5)*v}%)`,x.fillRect(i,j,1,1);return c.toDataURL()}</code>
+
+<p><b>Examples</b>
+<p>The images below are zoomed 10x. Reload the page to regenerate them.
+<p>
+
+
+<table>
+<tr>
+<th>H,S,L parameters
+<th>variation parameter
+<br>(default: 10)
+<th>width, height parameter
+<br>(default: 10)
+<th>High variation,<br>Different L values
+<tr>
+<td>
+
+<p>pxtex(ptc,250,50,50);
+<p>
+<script>
+document.write("<img width=100 height=100 style=image-rendering:pixelated src='"+pxtex(ptc,250,50,50)+"'>");
+</script>
+
+<td>
+
+<p>pxtex(ptc,9,90,30,5);
+<p>
+<script>
+document.write("<img width=100 height=100 style=image-rendering:pixelated src='"+pxtex(ptc,9,90,30,5)+"'>");
+</script>
+
+<p>pxtex(ptc,9,90,30,15);
+<p>
+<script>
+document.write("<img width=100 height=100 style=image-rendering:pixelated src='"+pxtex(ptc,9,90,30,15)+"'>");
+</script>
+
+<td>
+
+<p>pxtex(ptc,105,65,50,5,20,20);
+<p>
+<script>
+document.write("<img width=200 height=200 style=image-rendering:pixelated src='"+pxtex(ptc,105,65,50,5,20,20)+"'>");
+</script>
+
+<td>
+
+<p>pxtex(ptc,45,90,30,50,5,30);
+<br>pxtex(ptc,45,90,50,50,5,30);
+<br>pxtex(ptc,45,90,70,50,5,30);
+<p>
+<script>
+document.write("<img width=50 height=300 style=image-rendering:pixelated src='"+pxtex(ptc,45,90,30,50,5,30)+"'> &nbsp; ");
+
+document.write("<img width=50 height=300 style=image-rendering:pixelated src='"+pxtex(ptc,45,90,50,50,5,30)+"'> &nbsp; ");
+
+document.write("<img width=50 height=300 style=image-rendering:pixelated src='"+pxtex(ptc,45,90,70,50,5,30)+"'>");
+</script>
+
+
+</table>
+
+<style>
+body { font: 14px calibri }
+table { border-collapse: collapse }
+th, td { border: 1px solid; padding: 10px; }

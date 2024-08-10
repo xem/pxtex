@@ -72,7 +72,15 @@ document.write("<img width=50 height=300 style=image-rendering:pixelated src='"+
 
 
 </table>
-
+<br><br>
+<button id=crisp>Toggle "image:rendering:pixelated" on images</button>
+<script>
+scr = 1;
+crisp.onclick = () => {
+  scr = 1 - scr;
+  document.querySelectorAll("img").forEach(i=>i.style.imageRendering=scr?"pixelated":"");
+}
+</script>
 <style>
 body { font: 14px calibri }
 table { border-collapse: collapse }
